@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+          }
+          body{
+            background-color: #bc9868;
+            overflow-x: hidden;
+          }
+          .one{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+            border-radius: 10px;
+            height: 70px;
+          }
+          .a:hover{
+            background-color: #6a4a3e;
+            border-radius: 10px;
+            
+          }
+          .b:hover{
+            background-color: #6a4a3e;
+            border-radius: 10px;
+          }
+          .c:hover{
+            background-color: #6a4a3e;
+            border-radius: 10px;
+          }
+          .a,.b,.c{
+            display: inline-block;
+            margin-left: 300px;
+            padding: 10px;
+            color: white;
+            font-size: 30px;
+            margin-top: 10px;
+          
+          }
+          
+          .x{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 100px;
+            font-weight: bolder;
+            text-align: center;
+          
+          }
+          .y{
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+            font-size: 20px;
+          }
+          .w{
+            margin-left: 31%;
+            padding: 20px;
+            position: relative;
+          
+            
+          }
+          .w input{
+            border:1px solid black;
+            width: 500px;
+            padding: 17px;
+            border-radius: 10px;
+          }
+          .w button{
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            position: relative;
+            right: 11.6%;
+          }
+          .ee{
+            margin-left: 39%;
+          }
+          .k{
+            border-radius: 10px;
+          }
+          
+          .k1{
+            font-size: 70px;
+            position: relative;
+            left: 60%; 
+            font-family:fantasy;   
+            border-left: 2px solid black;
+            border-bottom: 2px solid black;
+            width: 1100px;
+          }
+          .k2{
+            font-size: 20px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 990px;
+          }
+          .k4{
+            font-size: 40px;
+            margin-left: 20px;
+          
+          }
+          .k6{
+            font-size: 20px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 990px;
+            text-align: center;
+            position: relative;
+            bottom: 30px;
+            
+          
+          }
+          .k7{
+            position: relative;
+            bottom: 30px;
+            left: 35%;
+          }
+          .gg{
+            color: black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+          }
+          .w2{
+            font-size: 70px;
+            text-align: right;
+            margin-right: 13%;
+            font-family:fantasy; 
+            border-right: 2px solid black;  
+            border-bottom: 2px solid black;
+            
+          }
+          .w3{
+            background-color:#fbeec1;
+            font-size: 20px;
+            padding: 10px;
+            width: 800px;
+            border-radius: 15px;
+          }
+          .z{
+            border-radius: 10px;
+            
+          }
+          .z1{
+            font-size: 70px;
+            margin-left: 25%;
+            font-family:fantasy;   
+            border-left: 2px solid black;
+            border-bottom: 2px solid black;
+            width: 1100px;
+          }
+          .z2,.z4,.z5{
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-left: 30px; 
+          }
+          .z3{
+            text-align: center;
+          }
+          .container {
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+          }
+          .k1 + .k3{
+            display: none;
+          }
+          .k1:hover + .k3{
+            display: block;
+          }
+          .w2 + .w3{
+            display: none;
+          }
+          .w2:hover +.w3{
+            display: block;
+          }
+          
+          .z1 +.po{
+            display: none;
+          }
+          .z1:hover + .po{
+            display: block;
+          }
+          
+          .kk{
+          width: 600px;
+          }
+          
+          .k3{
+          background-color:#fbeec1;
+          font-size: 20px;
+          padding: 10px;
+          width: 1000px;
+          border-radius: 15px;
+          margin-left: 73%;
+          
+          }
+          .po{
+          background-color: #fbeec1;
+          width: 400px;
+          font-size: 20px;
+          padding: 10px;
+          border-radius: 15px;
+          margin-left: 60%;
+          text-align: center;
+          }
+          .pli{
+          background-color: #6a4a3e;
+          text-align: center;
+          height: 50px;
+          padding: 5px;
+          border-radius: 10px;
+          }
+          .plo{
+          margin-top: 10px;
+          font-size: 20px;
+          }
+    </style>
+    <script>
+        function validateEmail(event) {
+        const emailInput = document.querySelector('.w input[type="email"]');
+        const email = emailInput.value.trim();
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+        if (!emailPattern.test(email)) {
+            alert('Please enter a valid email address.');
+            emailInput.focus();
+            event.preventDefault();
+            return false;
+        }
+
+        return true;
+    }
+    const registerButton = document.querySelector('.w button');
+    registerButton.addEventListener('click', (event) => {
+        if (!validateEmail(event)) {
+            event.stopPropagation();
+        }
+    });function openTab() {
+    window.open("https://www.index2.html/", "_blank");
+    }
+        </script>
+        
+</head>
+<body>
+    <section id="s1">
+    <div class="one">
+        <div class="a"><a href="#s2" class="gg">About Us</a></div>
+        <div class="b"><a href="#s3" class="gg">FAQs</a></div>
+        <div class="c"><a href="#s4" class="gg">Contact</a></div>
+    </div>
+    <div class="two">
+        <p class="x">DoubtsOnli</p>
+        <p class="y">Unravel the mysteries of learning, one question at a time, on a platform that connects curious minds worldwide.</p>
+    </div>
+    <div class="three">
+       <form action="http://localhost:8080/submitEmail" method='post'>
+        <div class="w"><input type="email" name="email" placeholder="Enter your mail id" required><a href="hom.html"><button id="email"  type="submit" value="Register Now" onclick="return validateEmail(event)" >Register Now</button></a></div>   
+    </form>
+    </div>
+    <img class="ee" src="https://i.postimg.cc/05MRnKMq/b1.png" alt="study">
+</section>
+<br><br><br><br><br><br>
+<section id="s2">
+    <div class="k">
+        <div class="kk">
+            <p class="k1">About Us</p>
+            <div class="k3">
+                <p class="k2">Welcome to <b>DoubtsOnli</b>, your go-to destination for collaborative doubt-solving and knowledge sharing! <br><br>Our platform was born out of a passion for learning and a belief in the power of community-driven education. We understand that everyone encounters questions and challenges along their learning journey, and we're here to provide a space where individuals from around the globe can come together to help each other grow and succeed.</p>
+            </div>
+            
+            
+        
+        </div>
+        
+    </div>
+    
+</section>
+
+<section id="s3">
+    <div class="w1">
+        <p class="w2">FAQs</p>
+        <div class="w3">
+            <p><b>Ques</b> What types of questions can be asked on DoubtsOnli? </p>
+            <p><b>Ans</b> Users can ask questions on a wide range of topics, including but 
+                not limited to academics, science, technology, arts, and 
+                humanities. DoubtsOnli aims to provide a platform for seeking 
+                clarification on any subject matter.</p>
+            <p>-----------------------------------------------------------------------------------------------------------------------</p>
+            <p><b>Ques</b> Is there any cost associated with using DoubtsOnli?</p>
+            <p><b>Ans</b> No, DoubtsOnli is a free-to-use platform for both asking 
+                questions and providing answers. There are no subscription fees 
+                or charges for accessing its features.
+                </p>
+            <p>-----------------------------------------------------------------------------------------------------------------------</p>
+            <p><b>Ques</b> Can users contribute answers on DoubtsOnli?</p>
+            <p><b>Ans</b> Yes, users are encouraged to contribute answers to questions 
+                posted on DoubtsOnli. By sharing their knowledge and expertise, 
+                users can help address the doubts and queries of others within 
+                the community.</p>
+            <p>-----------------------------------------------------------------------------------------------------------------------</p>
+            <p><b>Ques</b> How can users provide feedback or report issues on
+                DoubtsOnli?</p>
+            <p><b>Ans</b> Users can provide feedback, report issues, or contact the site 
+                administrators through designated channels such as a contact 
+                form or support email address. DoubtsOnli values user input and 
+                aims to address concerns promptly.
+                </p>
+        </div>
+       
+    </div>
+        
+</section>
+   <br><br> 
+<section id="s4">
+    <div class="z">
+        <p class="z1">Contact Details</p>
+        <div class="po">
+        <pre class="z2">Sameer Mahindru       22BIT0531</pre>
+        <pre class="z4">Hardik Pareek           22BIT0567</pre>
+        <pre class="z5">Aryan Singh Bisht     22BIT0252</pre>
+        </div>
+        <button><a href="http://localhost:8080/contact.html">Contact Us</a></button>
+        
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </section>
+    <div class="pli"><p class="plo"><b>© Copyright, DoubtsOnli</b></p></div>
+    
+  </body>
+</html>

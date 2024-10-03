@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="contactApp">
+<head>
+    <title>Contact Us</title>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 17px;
+            background-color: #bc9868;
+        }
+        body{
+            background-color: #d5ba98;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            resize: none;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Hide message div by default */
+        .container div {
+            display: none;
+        }
+        
+        /* Show message div when showMessage is true */
+        .container div.ng-show {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        /* Message styles based on success or error */
+        .container div.success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .container div.error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="ContactController as ctrl">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form ng-submit="ctrl.submitForm()" method="post" action="http://localhost:8080/submitQuery">
+            <input type="text" ng-model="ctrl.formData.name" placeholder="Your Name" required name="name"><br>
+            <input type="email" ng-model="ctrl.formData.email" placeholder="Your Email" required name="email"><br>
+            <textarea ng-model="ctrl.formData.query" placeholder="Your Message" required name="query"></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+        <div ng-show="ctrl.showMessage">{{ ctrl.message }}</div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
