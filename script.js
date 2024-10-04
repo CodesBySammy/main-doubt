@@ -9,7 +9,7 @@ async function submitQuestion(event) {
 
   try {
       // Send a POST request to the server with the form data
-      const response = await fetch("http://15.206.148.145:8080/submitQuestion", {
+      const response = await fetch("/submitQuestion", {
           method: "POST",
           body: formData
       });
