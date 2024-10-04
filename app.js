@@ -7,6 +7,21 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
+const cors = require('cors');
+
+// CORS configuration
+const allowedOrigins = ['https://13.233.192.209', 'https://localhost:8080'];
+app.use(cors({
+    origin: function (origin, callback) {
+        // Allow requests with no origin like mobile apps or curl.
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.indexOf(origin) === -1) {
+            return callback(new Error('Not allowed by CORS'), false);
+        }
+        return callback(null, true);
+    },
+    credentials: true // If using cookies
+}));
 
 // MongoDB connection URLs for "questions", "emails", "answers", and "queries" databases
 const questionsUrl = process.env.MONGO_questions_URL; // 'mongodb://localhost:27017'
@@ -14,13 +29,10 @@ const emailsUrl = process.env.MONGO_email_URL; // 'mongodb://localhost:27017'
 const answersUrl = process.env.MONGO_answers_URL; // 'mongodb://localhost:27017'
 const queriesUrl = process.env.MONGO_queries_URL; // 'mongodb://localhost:27017'
 
-
-
 console.log('MongoDB Questions URL:', process.env.MONGO_questions_URL);
 console.log('MongoDB Answers URL:', process.env.MONGO_answers_URL);
 console.log('MongoDB Emails URL:', process.env.MONGO_email_URL);
 console.log('MongoDB Queries URL:', process.env.MONGO_queries_URL);
-
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -38,7 +50,7 @@ app.use(session({
     }
 }));
 
-const PORT=process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
