@@ -10,7 +10,7 @@ const cookieParser = require("cookie-parser");
 const cors = require('cors');
 
 // CORS configuration
-const allowedOrigins = ['http://13.233.192.209'];
+const allowedOrigins = ['http://localhost:8080'];
 app.use(cors({
     origin: function (origin, callback) {
         // Allow requests with no origin like mobile apps or curl.
