@@ -38,7 +38,7 @@
     <script>
         async function fetchQuestions() {
             try {
-                const response = await fetch('http://15.206.148.145:8080/questions'); // Replace with your server endpoint
+                const response = await fetch('http://localhost:8080/questions'); // Replace with your server endpoint
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
