@@ -18,7 +18,7 @@ angular.module('contactApp', [])
 
             $http({
                 method: 'POST',
-                url: 'https://15.206.148.145:8080/submitQuery', // Update to match your server endpoint
+                url: 'http://15.206.148.145:8080/submitQuery', // Update to match your server endpoint
                 data: self.formData
             })
             .then(function(response) {
