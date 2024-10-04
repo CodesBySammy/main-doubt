@@ -97,7 +97,7 @@
 
         async function submitAnswer(questionId, answer) {
             try {
-                const response = await fetch('http://15.206.148.145:8080/submitAnswer', {
+                const response = await fetch('http://localhost:8080/submitAnswer', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -123,6 +123,6 @@
 <body>
 
 <div id="questionList"></div> <!-- Placeholder for displaying fetched questions -->
-<a href="http://15.206.148.145:8080/answers.html"><input type="submit" value ="Answers" ></a>
+<a href="http://localhost:8080/answers.html"><input type="submit" value ="Answers" ></a>
 </body>
 </html>
